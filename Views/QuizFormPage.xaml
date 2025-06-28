@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ODSQuizApp.Views.QuizFormPage">
+    <ScrollView>
+        <StackLayout Padding="20">
+            <Label Text="Nuevo Quiz" FontSize="24" />
+            <Entry x:Name="TitleEntry" Placeholder="Título" />
+            <Editor x:Name="DescriptionEditor" Placeholder="Descripción" HeightRequest="100" />
+            <Entry x:Name="OdsEntry" Placeholder="ODS (1-17)" Keyboard="Numeric" />
+            <Switch x:Name="IsPublicSwitch" />
+            <Label Text="¿Público?" />
+            <Button Text="Guardar" Clicked="OnSaveClicked" />
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

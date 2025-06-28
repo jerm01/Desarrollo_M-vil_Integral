@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ODSQuizApp.Views.QuestionFormPage">
+    <ScrollView>
+        <StackLayout Padding="20">
+            <Label Text="Nueva Pregunta" FontSize="24" />
+            <Editor x:Name="QuestionEditor" Placeholder="Pregunta" />
+            <Entry x:Name="Option1" Placeholder="Opción 1" />
+            <Entry x:Name="Option2" Placeholder="Opción 2" />
+            <Entry x:Name="Option3" Placeholder="Opción 3" />
+            <Entry x:Name="Option4" Placeholder="Opción 4" />
+            <Entry x:Name="CorrectIndex" Placeholder="Índice correcto (0-3)" Keyboard="Numeric" />
+            <Entry x:Name="ImageUrl" Placeholder="URL de imagen (opcional)" />
+            <Entry x:Name="Points" Placeholder="Puntaje" Keyboard="Numeric" />
+            <Button Text="Guardar" Clicked="OnSaveClicked" />
+        </StackLayout>
+    </ScrollView>
+</ContentPage>
