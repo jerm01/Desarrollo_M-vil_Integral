@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Shell
+    x:Class="ODSQuizApp.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:views="clr-namespace:ODSQuizApp.Views;assembly=ODSQuizApp">
+
+    <ShellContent Route="LoginPage" ContentTemplate="{DataTemplate views:LoginPage}" />
+    <ShellContent Route="MainPage" ContentTemplate="{DataTemplate views:MainPage}" />
+    <ShellContent Route="QuizFormPage" ContentTemplate="{DataTemplate views:QuizFormPage}" />
+    <ShellContent Route="QuestionsPage" ContentTemplate="{DataTemplate views:QuestionsPage}" />
+
+</Shell>
