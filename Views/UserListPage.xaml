@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ODSQuizApp.Views.UserListPage"
+             Title="Lista de Usuarios">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="10">
+
+            <Button Text="Agregar Usuario" Clicked="OnCreateUserClicked" />
+
+            <CollectionView x:Name="UserListView">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Frame BorderColor="LightGray" CornerRadius="10" Padding="10" Margin="5">
+                            <VerticalStackLayout Spacing="5">
+                                <Label Text="{Binding Name}" FontAttributes="Bold" />
+                                <Label Text="{Binding LastName}" />
+                                <Label Text="{Binding Role}" />
+                                <Label Text="{Binding PhoneNumber}" />
+                                <Label Text="{Binding BirthDate}" />
+
+                                <HorizontalStackLayout Spacing="10">
+                                    <Button Text="Editar"
+                                            Clicked="OnEditUserClicked"
+                                            CommandParameter="{Binding}" />
+
+                                    <Button Text="Eliminar"
+                                            BackgroundColor="Red"
+                                            TextColor="White"
+                                            Clicked="OnDeleteUserClicked"
+                                            CommandParameter="{Binding}" />
+                                </HorizontalStackLayout>
+                            </VerticalStackLayout>
+                        </Frame>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+
+            <Button Text="Volver al Inicio"
+                    Margin="0,20,0,0"
+                    BackgroundColor="#007AFF"
+                    TextColor="White"
+                    Clicked="OnBackToMainPageClicked"/>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

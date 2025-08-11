@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ODSQuizApp.Views.RegisterPage"
+             Title="Registro">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="10">
+
+            <Label Text="Nombre" />
+            <Entry x:Name="NameEntry" Placeholder="Nombre" />
+
+            <Label Text="Apellidos" />
+            <Entry x:Name="LastNameEntry" Placeholder="Apellidos" />
+
+            <Label Text="Correo electrónico" />
+            <Entry x:Name="EmailEntry" Placeholder="Correo electrónico" Keyboard="Email" />
+
+            <Label Text="Contraseña" />
+            <Entry x:Name="PasswordEntry" Placeholder="Contraseña" IsPassword="True" />
+
+            <Label Text="Número de celular" />
+            <Entry x:Name="PhoneNumberEntry" Placeholder="Ej. 5512345678" Keyboard="Telephone" />
+
+            <Label Text="Fecha de nacimiento" />
+            <DatePicker x:Name="BirthDatePicker" />
+
+            <Label Text="Rol" />
+            <Picker x:Name="RolePicker" Title="Selecciona un rol">
+                <Picker.Items>
+                    <x:String>Admin</x:String>
+                    <x:String>Estudiante</x:String>
+                </Picker.Items>
+            </Picker>
+
+            <Label x:Name="ErrorLabel" TextColor="Red" IsVisible="False" />
+
+            <Button Text="Registrarse" Clicked="OnRegisterClicked" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

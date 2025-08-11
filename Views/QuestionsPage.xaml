@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ODSQuizApp.Views.QuestionsPage"
+             Title="Preguntas">
+
+    <Grid Padding="20" RowDefinitions="Auto,*">
+        <!-- Botón fijo arriba -->
+        <Button Text="Agregar Pregunta"
+                BackgroundColor="#b89eff"
+                TextColor="Black"
+                CornerRadius="10"
+                Clicked="OnAddQuestionClicked"
+                Grid.Row="0" />
+
+        <!-- Lista scrollable abajo -->
+        <CollectionView x:Name="QuestionsCollection"
+                        Grid.Row="1">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Frame BorderColor="Gray" CornerRadius="10" Padding="10" Margin="5">
+                        <StackLayout>
+                            <Label Text="{Binding QuestionText}" FontAttributes="Bold" FontSize="16"/>
+                            <Label Text="{Binding Points, StringFormat='Puntos: {0}'}" FontSize="14"/>
+                            <Label Text="{Binding ImageUrl}" FontSize="12" TextColor="Gray" LineBreakMode="TailTruncation"/>
+
+                            <HorizontalStackLayout Spacing="10">
+                                <Button Text="Editar" Clicked="OnEditQuestionClicked"/>
+                                <Button Text="Eliminar" Clicked="OnDeleteQuestionClicked" BackgroundColor="Red" TextColor="White"/>
+                            </HorizontalStackLayout>
+                        </StackLayout>
+                    </Frame>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </Grid>
+</ContentPage>

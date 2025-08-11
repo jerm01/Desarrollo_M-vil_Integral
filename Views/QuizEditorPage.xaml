@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ODSQuizApp.Views.QuizEditorPage"
+             Title="Editar Quiz">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="12">
+            <Button Text="⟵ Volver" Clicked="OnBackClicked" />
+
+            <Label Text="Título" />
+            <Entry x:Name="TitleEntry" Placeholder="Título" />
+
+            <Label Text="Descripción" />
+            <Editor x:Name="DescriptionEntry" Placeholder="Descripción" HeightRequest="100" />
+
+            <Label Text="ODS" FontAttributes="Bold" />
+            <Picker x:Name="OdsPicker"
+                    Title="Selecciona un ODS"
+                    ItemDisplayBinding="{Binding .}"
+                    SelectedIndexChanged="OnOdsChanged" />
+
+            <Label x:Name="OdsDescripcionLabel" FontAttributes="Italic" TextColor="Gray" />
+
+            <Button Text="Guardar cambios" Clicked="OnSaveClicked" />
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

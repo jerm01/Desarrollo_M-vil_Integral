@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ODSQuizApp.Views.QuestionFormPage"
+             Title="Formulario de Pregunta">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="15">
+
+            <Entry x:Name="QuestionEntry" Placeholder="Texto de la pregunta" />
+
+            <Entry x:Name="Option1Entry" Placeholder="Opción 1" />
+            <Entry x:Name="Option2Entry" Placeholder="Opción 2" />
+            <Entry x:Name="Option3Entry" Placeholder="Opción 3" />
+            <Entry x:Name="Option4Entry" Placeholder="Opción 4" />
+            <Entry x:Name="CorrectIndexEntry" Placeholder="Índice de respuesta correcta (0-3)" Keyboard="Numeric" />
+            <Entry x:Name="PointsEntry" Placeholder="Puntos" Keyboard="Numeric" />
+            <Button Text="Guardar"
+                    BackgroundColor="#b89eff"
+                    TextColor="Black"
+                    CornerRadius="10"
+                    Clicked="OnSaveClicked"/>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
